@@ -9,15 +9,14 @@ use app\models\User;
 /**
  * @package antonkorotkyi\phpmvc
  */
-
 class Application
 {
     public string $layout = 'main';
     public string $userClass;
     public Router $router;
     public Request $request;
-    public  Response $response;
-    public  Session $session;
+    public Response $response;
+    public Session $session;
     public Database $db;
     public static Application $app;
     public ?Controller $controller = null;
@@ -39,10 +38,10 @@ class Application
         $this->db = new Database($config['db']);
 
         $primaryValue = $this->session->get('user');
-        if($primaryValue) {
+        if ($primaryValue) {
             $primaryKey = $this->userClass::primaryKey();
-            $this->user = $this->userClass::findOne([$primaryKey=> $primaryValue]);
-        } else{
+            $this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);
+        } else {
             $this->user = null;
         }
     }
@@ -54,12 +53,12 @@ class Application
 
     public function run()
     {
-        try{
+        try {
             echo $this->router->resolve();
         } catch (\Exception $e) {
             $this->response->setStatusCode($e->getCode());
             echo $this->view->renderView('_error', [
-                'exception'=>$e,
+                'exception' => $e,
             ]);
         }
     }
