@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace antonkorotkyi\phpmvc;
 
-use app\core\middlewares\BaseMiddleware;
+use antonkorotkyi\phpmvc\middlewares\BaseMiddleware;
 
 class Controller
 {

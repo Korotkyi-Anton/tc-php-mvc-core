@@ -1,13 +1,13 @@
 <?php
 
-namespace app\core;
+namespace antonkorotkyi\phpmvc;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use antonkorotkyi\phpmvc\db\Database;
+use antonkorotkyi\phpmvc\db\DbModel;
 use app\models\User;
 
 /**
- * @package app\core
+ * @package antonkorotkyi\phpmvc
  */
 
 class Application
@@ -30,7 +30,7 @@ class Application
         $this->userClass = $config['userClass'];
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
-        $this->request = new \app\core\Request();
+        $this->request = new \antonkorotkyi\phpmvc\Request();
         $this->response = new Response();
         $this->session = new Session();
         $this->router = new Router($this->request, $this->response);

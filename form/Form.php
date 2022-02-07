@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\form;
+namespace antonkorotkyi\phpmvc\form;
 
-use app\core\Model;
+use antonkorotkyi\phpmvc\Model;
 
 class Form
 {
