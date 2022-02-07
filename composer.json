@@ -2,7 +2,7 @@
     "name": "antonkorotkyi/php-mvc-core",
     "autoload": {
         "psr-4": {
-            "antonkorotkyi\\PhpMvcCore\\": "src/"
+            "Tc\\PhpMvcCore\\": "src/"
         }
     },
     "authors": [
